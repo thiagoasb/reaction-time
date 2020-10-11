@@ -84,6 +84,7 @@ start.onclick = function() {
 }
 reset.onclick = function() {
     score = 0;
+    showScore.value = score;
     document.getElementById('circle').style.display = 'none';
     console.log(score);
 }
