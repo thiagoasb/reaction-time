@@ -31,28 +31,35 @@ function keyChosen(event) {
         case 37: //left 33cc33
             color === '#33cc33'? score++ : score--;
             showScore.value = score;
+            timeEnd = new Date().getTime();        
+            timeTaken = (timeEnd - timeStart) / 1000;
             console.log(score);
             break;
         case 38: //up D00000
             color === '#D00000'? score++ : score--;
             showScore.value = score;
+            timeEnd = new Date().getTime();        
+            timeTaken = (timeEnd - timeStart) / 1000;
             console.log(score);
             break;
         case 39: //right ffff00
             color === '#ffff00'? score++ : score--;
             showScore.value = score;
+            timeEnd = new Date().getTime();        
+            timeTaken = (timeEnd - timeStart) / 1000;
             console.log(score);
             break;
         case 40: //down 00b8e6
             color === '#00b8e6'? score++ : score--;
             showScore.value = score;
+            timeEnd = new Date().getTime();        
+            timeTaken = (timeEnd - timeStart) / 1000;
             console.log(score);
             break;
         default:
     }
 
-    timeEnd = new Date().getTime();        
-    timeTaken = (timeEnd - timeStart) / 1000;
+    timeStart = new Date().getTime();
     reactionTime.value = timeTaken;
 
     color = getRandomColor();
