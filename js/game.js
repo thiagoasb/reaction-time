@@ -29,32 +29,42 @@ function keyChosen(event) {
     
     switch (event.keyCode) {
         case 37: //left 33cc33
-            color === '#33cc33'? score++ : score--;
+            if (color === '#33cc33') {
+                score++;
+                timeEnd = new Date().getTime();        
+                timeTaken = (timeEnd - timeStart) / 1000;
+            } else {
+                score--;
+            }
             showScore.value = score;
-            timeEnd = new Date().getTime();        
-            timeTaken = (timeEnd - timeStart) / 1000;
-            console.log(score);
             break;
         case 38: //up D00000
-            color === '#D00000'? score++ : score--;
-            showScore.value = score;
-            timeEnd = new Date().getTime();        
-            timeTaken = (timeEnd - timeStart) / 1000;
-            console.log(score);
+            if (color === '#D00000') {
+                score++;
+                showScore.value = score;
+                timeEnd = new Date().getTime();        
+                timeTaken = (timeEnd - timeStart) / 1000;
+            } else {
+                score--;
+            }
             break;
         case 39: //right ffff00
-            color === '#ffff00'? score++ : score--;
-            showScore.value = score;
-            timeEnd = new Date().getTime();        
-            timeTaken = (timeEnd - timeStart) / 1000;
-            console.log(score);
+            if (color === '#ffff00') {
+                score++;
+                showScore.value = score;
+                timeEnd = new Date().getTime();        
+                timeTaken = (timeEnd - timeStart) / 1000;
+            } else {
+                score--;
+            }
             break;
         case 40: //down 00b8e6
-            color === '#00b8e6'? score++ : score--;
-            showScore.value = score;
-            timeEnd = new Date().getTime();        
-            timeTaken = (timeEnd - timeStart) / 1000;
-            console.log(score);
+            if (color === '#00b8e6') {
+                score++;
+                showScore.value = score;
+                timeEnd = new Date().getTime();        
+                timeTaken = (timeEnd - timeStart) / 1000;
+            }
             break;
         default:
     }
@@ -87,6 +97,7 @@ const averageTime = document.getElementById('average');
 const showScore = document.getElementById('score');
 
 start.onclick = function() {
+    timeStart = new Date().getTime();
     document.getElementById('circle').style.display = 'block';
 }
 reset.onclick = function() {
@@ -99,8 +110,6 @@ reset.onclick = function() {
 }
 
 showScore.value = score;
-
 getRandomPosition(color);
-timeStart = new Date().getTime();
 document.addEventListener('keydown', keyChosen);
 console.log(score);
