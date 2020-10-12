@@ -41,7 +41,6 @@ function keyChosen(event) {
         case 38: //up D00000
             if (color === '#D00000') {
                 score++;
-                showScore.value = score;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
             } else {
@@ -51,7 +50,6 @@ function keyChosen(event) {
         case 39: //right ffff00
             if (color === '#ffff00') {
                 score++;
-                showScore.value = score;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
             } else {
@@ -61,7 +59,6 @@ function keyChosen(event) {
         case 40: //down 00b8e6
             if (color === '#00b8e6') {
                 score++;
-                showScore.value = score;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
             } else {
@@ -73,7 +70,7 @@ function keyChosen(event) {
 
     timeStart = new Date().getTime();
     reactionTime.value = timeTaken;
-
+    showScore.value = score;
     color = getRandomColor();
     getRandomPosition(color);
 }
