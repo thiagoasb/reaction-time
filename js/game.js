@@ -73,14 +73,14 @@ function keyChosen(event) {
     showScore.value = score;
     color = getRandomColor();
     getRandomPosition(color);
-}
 
-function endGame() {
-    if (score < 0) {
-        alert('Seu score foi menor que o limite, tente novamente!');
+    if (score === 10) {
         score = 0;
-    } else if (socre < 10) {
-        alert('Você demorou XXXXXX segundos para chegar ao score de 10.')
+        showScore.value = score;
+        reactionTime.value = '';
+        averageTime.value='';
+        document.getElementById('circle').style.display = 'none';
+        alert('Você demorou XXs para chegar ao score de 10');
     }
 }
 

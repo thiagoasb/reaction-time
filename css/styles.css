@@ -21,6 +21,7 @@
     border-radius: 50%;
     position: absolute;
     display: none;
+    transition: all 0.1s;
 }
 
 .button {
