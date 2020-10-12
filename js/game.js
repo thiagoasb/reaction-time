@@ -77,7 +77,7 @@ function Game() {
 
 var score = 0;
 var color = getRandomColor();
-var timeStart;
+var timeStart = new Date().getTime();
 var timeEnd;
 var timeTaken;
 const start = document.getElementById('start');
@@ -92,6 +92,8 @@ start.onclick = function() {
 reset.onclick = function() {
     score = 0;
     showScore.value = score;
+    reactionTime.value = '';
+    averageTime.value='';
     document.getElementById('circle').style.display = 'none';
     console.log(score);
 }
