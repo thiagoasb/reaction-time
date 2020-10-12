@@ -33,8 +33,10 @@ function keyChosen(event) {
                 score++;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
+                document.getElementById('score').style.color = '#008000';
             } else {
                 score--;
+                document.getElementById('score').style.color = '#ff0000';
             }
             showScore.value = score;
             break;
@@ -43,8 +45,10 @@ function keyChosen(event) {
                 score++;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
+                document.getElementById('score').style.color = '#008000';
             } else {
                 score--;
+                document.getElementById('score').style.color = '#ff0000';
             }
             break;
         case 39: //right ffff00
@@ -52,8 +56,10 @@ function keyChosen(event) {
                 score++;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
+                document.getElementById('score').style.color = '#008000';
             } else {
                 score--;
+                document.getElementById('score').style.color = '#ff0000';
             }
             break;
         case 40: //down 00b8e6
@@ -61,8 +67,10 @@ function keyChosen(event) {
                 score++;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
+                document.getElementById('score').style.color = '#008000';
             } else {
                 score--;
+                document.getElementById('score').style.color = '#ff0000';
             }
             break;
         default:
