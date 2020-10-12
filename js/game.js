@@ -64,6 +64,8 @@ function keyChosen(event) {
                 showScore.value = score;
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
+            } else {
+                score--;
             }
             break;
         default:
@@ -76,7 +78,7 @@ function keyChosen(event) {
     getRandomPosition(color);
 }
 
-function Game() {
+function endGame() {
     if (score < 0) {
         alert('Seu score foi menor que o limite, tente novamente!');
         score = 0;
