@@ -34,6 +34,7 @@ function keyChosen(event) {
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
                 document.getElementById('score').style.color = '#008000';
+                soma += timeTaken;
             } else {
                 score--;
                 document.getElementById('score').style.color = '#ff0000';
@@ -46,6 +47,7 @@ function keyChosen(event) {
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
                 document.getElementById('score').style.color = '#008000';
+                soma += timeTaken;
             } else {
                 score--;
                 document.getElementById('score').style.color = '#ff0000';
@@ -57,6 +59,7 @@ function keyChosen(event) {
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
                 document.getElementById('score').style.color = '#008000';
+                soma += timeTaken;
             } else {
                 score--;
                 document.getElementById('score').style.color = '#ff0000';
@@ -68,6 +71,7 @@ function keyChosen(event) {
                 timeEnd = new Date().getTime();        
                 timeTaken = (timeEnd - timeStart) / 1000;
                 document.getElementById('score').style.color = '#008000';
+                soma += timeTaken;
             } else {
                 score--;
                 document.getElementById('score').style.color = '#ff0000';
@@ -79,6 +83,8 @@ function keyChosen(event) {
     timeStart = new Date().getTime();
     reactionTime.value = timeTaken;
     showScore.value = score;
+    average = soma / 10;
+    averageTime.value = average;
     color = getRandomColor();
     getRandomPosition(color);
 
@@ -88,7 +94,7 @@ function keyChosen(event) {
         reactionTime.value = '';
         averageTime.value='';
         document.getElementById('circle').style.display = 'none';
-        alert('Você demorou XXs para chegar ao score de 10');
+        alert('Você demorou ' + average + 'para chegar ao score de 10');
     }
 }
 
@@ -97,6 +103,8 @@ var color = getRandomColor();
 var timeStart = new Date().getTime();
 var timeEnd;
 var timeTaken;
+var soma = 0;
+var average = 0;
 const start = document.getElementById('start');
 const reset = document.getElementById('reset');
 const reactionTime = document.getElementById('time');
