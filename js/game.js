@@ -117,6 +117,7 @@ start.onclick = function() {
 }
 reset.onclick = function() {
     score = 0;
+    averageTime = 0;
     showScore.value = score;
     reactionTime.value = '';
     averageTime.value='';
