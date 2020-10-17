@@ -21,14 +21,10 @@ function getRandomPosition(color) {
     
 }
 
-function circleApperanceInterval() {
-    setTimeout(getRandomPosition, 1000);
-}
-
 function keyChosen(event) {
     
     switch (event.keyCode) {
-        case 37: //left 33cc33
+        case 37: //left 33cc33 verde
             if (color === '#33cc33') {
                 score++;
                 timeEnd = new Date().getTime();        
@@ -41,7 +37,7 @@ function keyChosen(event) {
             }
             showScore.value = score;
             break;
-        case 38: //up D00000
+        case 38: //up D00000 vermelho
             if (color === '#D00000') {
                 score++;
                 timeEnd = new Date().getTime();        
@@ -53,7 +49,7 @@ function keyChosen(event) {
                 document.getElementById('score').style.color = '#ff0000';
             }
             break;
-        case 39: //right ffff00
+        case 39: //right ffff00 amarelo
             if (color === '#ffff00') {
                 score++;
                 timeEnd = new Date().getTime();        
@@ -65,7 +61,7 @@ function keyChosen(event) {
                 document.getElementById('score').style.color = '#ff0000';
             }
             break;
-        case 40: //down 00b8e6
+        case 40: //down 00b8e6 azul
             if (color === '#00b8e6') {
                 score++;
                 timeEnd = new Date().getTime();        
@@ -94,22 +90,21 @@ function keyChosen(event) {
         reactionTime.value = '';
         averageTime.value='';
         document.getElementById('circle').style.display = 'none';
-        alert('Você demorou ' + average + 'para chegar ao score de 10');
+        alert('Você demorou ' + average + 's para chegar ao score de 10');
     }
 }
 
 var score = 0;
-var color = getRandomColor();
-var timeStart = new Date().getTime();
-var timeEnd;
-var timeTaken;
 var soma = 0;
 var average = 0;
+var timeEnd;
+var timeTaken;
 const start = document.getElementById('start');
 const reset = document.getElementById('reset');
 const reactionTime = document.getElementById('time');
 const averageTime = document.getElementById('average');
 const showScore = document.getElementById('score');
+var color = getRandomColor();
 
 start.onclick = function() {
     timeStart = new Date().getTime();
