@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Reaction Test</title>
 </head>
 <body>
-    <div id="show">
-        <label for="time">Tempo de Reação (s):</label>
-        <input id="time" type="text" readonly>
-        <label for="average">Tempo Médio (s):</label>
-        <input id="average" type="text" readonly>
-        <label for="score">Score: </label>
-        <input id="score" type="text" readonly>
-    </div>
-    
-    <div id="game-area">
-        <div id="circle"></div>
-    </div>
 
-    <div id="buttons">
-        <button id="start" class="button">START</button>
-        <button id="reset" class="button">RESET</button>
-    </div>
+    <header>
+        <h3>SISTEMAS DE TEMPO REAL - TEMPO DE REAÇÃO</h3>
+    </header>
+    <main>
+        <div id="game-area">
+            <div id="circle"></div>
+        </div>
+    
+        <aside>
+            <div id="show">
+                <label for="time">Tempo de Reação (s):</label>
+                <input id="time" type="text" readonly>
+                <label for="average">Tempo Médio (s):</label>
+                <input id="average" type="text" readonly>
+                <label for="score">Score: </label>
+                <input id="score" type="text" readonly>
+            </div>
+        
+            <div id="buttons">
+                <button id="start" class="button">START</button>
+                <button id="reset" class="button">RESET</button>
+            </div>
+        </aside>
+    </main>
     
     <script type="text/javascript" src="js/game.js"></script>
 </body>
